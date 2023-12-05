@@ -3,9 +3,13 @@ services:
   app:
     build:
       context: .
-    ports:
-      - "8083:5173"
+    container_name: $UNITNAME.$PROJECT_NAME
     env_file: ".env.local"
     volumes:
       - .:/app
       - /app/node_modules
+
+networks:
+  default:
+    external:
+      name: unitman_default

@@ -1,0 +1,19 @@
+variables:
+  - id: VITE_APP_TITLE
+    label: VITE_APP_TITLE
+    type: string
+
+build:
+  - docker-compose -f docker-compose.unitman.yml build --no-cache
+
+prepare:
+  - cp .env.dist .env.local
+
+reset_prepare:
+  - rm -rf .env.local
+
+up:
+  - docker-compose -f docker-compose.unitman.yml up -d --build
+
+down:
+  - docker-compose -f docker-compose.unitman.yml down
