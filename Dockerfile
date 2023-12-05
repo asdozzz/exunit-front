@@ -9,5 +9,4 @@ COPY . .
 RUN yarn install
 
 # vite default port
-EXPOSE 5173
 CMD ["yarn", "run", "dev"]
