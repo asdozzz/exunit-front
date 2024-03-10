@@ -3,6 +3,16 @@ variables:
     label: VITE_APP_TITLE
     type: string
 
+  - id: TEST_LIST
+    label: TEST_LIST
+    type: collection
+    options: 
+      - id: 1
+        name: first
+
+      - id: 2
+        name: second
+
 build:
   - docker-compose -f docker-compose.unitman.yml build --no-cache
 
