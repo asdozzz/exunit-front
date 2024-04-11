@@ -2,6 +2,19 @@ variables:
   - id: VITE_APP_TITLE
     label: VITE_APP_TITLE
     type: string
+    defaultValue: "def val"
+
+  - id: TEST_LIST
+    label: Коллекция
+    type: collection
+    options:
+      - id: 1
+        name: first
+
+      - id: 2
+        name: second
+    defaultValue: 1
+   
 
 build:
   - docker-compose -f docker-compose.unitman.yml build --no-cache
