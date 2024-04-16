@@ -3,7 +3,7 @@ services:
   app:
     build:
       context: .
-    container_name: $UNITNAME.$PROJECT_NAME
+    container_name: $UNITMAN_UNIT_NAME.$UNITMAN_PROJECT_NAME
     env_file: ".env.local"
     volumes:
       - .:/app
