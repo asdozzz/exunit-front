@@ -11,7 +11,7 @@ const test_list = import.meta.env.VITE_APP_TEST_LIST
 </script>
 
 <template>
-  <h1>asd   {{ title }} / {{test_list}}   asdas</h1>
+  <h1>#   {{ title }} / {{test_list}}   #</h1>
 </template>
 
 <style scoped>
