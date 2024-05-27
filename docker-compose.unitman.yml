@@ -3,13 +3,9 @@ services:
   app:
     build:
       context: .
-    container_name: $UNITMAN_UNIT_NAME.$UNITMAN_PROJECT_NAME
     env_file: ".env.local"
     volumes:
       - .:/app
       - /app/node_modules
-
-networks:
-  default:
-    external:
-      name: unitman_default
+    ports:
+      - 80:5173
