@@ -4,8 +4,5 @@ services:
     build:
       context: .
     env_file: ".env.local"
-    volumes:
-      - .:/app
-      - /app/node_modules
     ports:
       - 80:5173
