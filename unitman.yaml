@@ -17,7 +17,7 @@ variables:
    
 
 build:
-  - docker-compose -f docker-compose.unitman.yml build --no-cache
+  - docker-compose build --no-cache
 
 prepare:
   - cp .env.dist .env.local
@@ -26,7 +26,7 @@ reset_prepare:
   - rm -rf .env.local
 
 up:
-  - docker-compose -f docker-compose.unitman.yml up -d --build
+  - docker-compose up -d --build
 
 down:
-  - docker-compose -f docker-compose.unitman.yml down
+  - docker-compose down
