@@ -5,4 +5,4 @@ services:
       context: .
     env_file: ".env.local"
     ports:
-      - 80:5173
+      - 8089:5173
