@@ -14,7 +14,16 @@ variables:
       - id: 2
         name: second
     defaultValue: 1
-   
+
+services:
+  web:
+    ports:
+      - port: 8089
+        type: 'http'
+      - port: 80
+        type: 'http'
+      - port: 5043
+        type: 'tcp'  
 
 build:
   - docker-compose build
