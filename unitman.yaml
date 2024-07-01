@@ -39,3 +39,7 @@ up:
 
 down:
   - docker-compose down
+
+cache:
+  paths:
+    - node_modules/
