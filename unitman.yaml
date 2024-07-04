@@ -25,9 +25,6 @@ services:
       - port: 5043
         type: 'tcp'
 
-build:
-  - docker-compose build
-
 prepare:
   - cp .env.dist .env.local
 
@@ -35,10 +32,10 @@ reset_prepare:
   - rm -rf .env.local
 
 up:
-  - docker-compose up -d --build
+  - podman-compose up -d --build
 
 down:
-  - docker-compose down
+  - podman-compose down
 
 cache:
   paths:
