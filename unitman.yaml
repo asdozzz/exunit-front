@@ -40,3 +40,4 @@ down:
 cache:
   paths:
     - node_modules/
+    - .yarn
