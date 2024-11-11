@@ -6,7 +6,7 @@ RUN npm install -g vite
 # copy all filtes
 COPY . .
 # install all deps
-RUN yarn install --cache-folder .yarn
+RUN yarn install --frozen-lockfile --cache-folder .yarn
 
 # vite default port
 CMD ["yarn", "run", "dev"]
