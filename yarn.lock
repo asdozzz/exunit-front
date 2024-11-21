@@ -306,6 +306,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/rollup-linux-x64-musl@npm:4.9.5":
+  version: 4.9.5
+  resolution: "@rollup/rollup-linux-x64-musl@npm:4.9.5"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
 "@rollup/rollup-win32-arm64-msvc@npm:4.6.1":
   version: 4.6.1
   resolution: "@rollup/rollup-win32-arm64-msvc@npm:4.6.1"
@@ -740,9 +747,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "exunit-front@workspace:."
   dependencies:
+    "@rollup/rollup-linux-x64-musl": 4.9.5
     "@vitejs/plugin-vue": 4.5.0
     vite: 5.0.0
     vue: ^3.3.8
+  dependenciesMeta:
+    "@rollup/rollup-linux-x64-musl":
+      optional: true
   languageName: unknown
   linkType: soft
 

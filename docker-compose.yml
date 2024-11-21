@@ -6,3 +6,5 @@ services:
     env_file: ".env.local"
     ports:
       - 8089:5173
+    volumes:
+      - ./:/app

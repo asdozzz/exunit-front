@@ -24,6 +24,13 @@ services:
         type: 'http'
       - port: 5043
         type: 'tcp'
+    cache:
+      files:
+        - yarn.lock
+      paths:
+        - node_modules/
+        - .yarn
+
 
 prepare:
   - envsubst < .env.dist > .env.local
@@ -37,7 +44,3 @@ up:
 down:
   - podman-compose down
 
-cache:
-  paths:
-    - node_modules/
-    - .yarn
