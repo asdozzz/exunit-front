@@ -4,9 +4,9 @@ services:
     build:
       context: .
       cache_from:
-        - type=registry,ref=http://unitman_registry:5000/exunit-front/app:latest
+        - host.units:5000/exunit-front
       cache_to:
-        - type=registry,ref=http://unitman_registry:5000/exunit-front/app:latest,mod=max
+        - host.units:5000/exunit-front
     env_file: ".env.local"
     ports:
       - 8089:5173
