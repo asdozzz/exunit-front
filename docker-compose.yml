@@ -4,10 +4,10 @@ services:
     build:
       context: .
       cache_from:
-        - type=registry,ref=${UNITMAN_CACHE_REPO}/exunit-front/app:${UNITMAN_UNIT_NAME}
+        - type=registry,ref=${UNITMAN_CACHE_REPO}/exunit-front/app:${UNITMAN_BRANCH_NAME}
         - type=registry,ref=${UNITMAN_CACHE_REPO}/exunit-front/app:latest
       cache_to:
-        - type=registry,ref=${UNITMAN_CACHE_REPO}/exunit-front/app:${UNITMAN_UNIT_NAME},mode=max
+        - type=registry,ref=${UNITMAN_CACHE_REPO}/exunit-front/app:${UNITMAN_BRANCH_NAME},mode=max
         - type=registry,ref=${UNITMAN_CACHE_REPO}/exunit-front/app:latest,mode=max
     env_file: ".env.local"
     ports:
