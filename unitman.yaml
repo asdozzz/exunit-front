@@ -39,9 +39,9 @@ reset_prepare:
   - rm -rf .env.local
 
 up:
-  - podman compose --podman-build-args="--tls-verify=false" build
-  - podman-compose up -d
+  - docker compose build
+  - docker-compose up -d
 
 down:
-  - podman-compose down
+  - docker-compose down
 
