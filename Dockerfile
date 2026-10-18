@@ -12,8 +12,7 @@ RUN yarn --version
 COPY package.json yarn.lock ./
 
 # install all deps
-RUN yarn install --immutable --immutable-cache
-
+RUN yarn install
 COPY . . 
 # vite default port
 CMD ["yarn", "run", "dev"]
