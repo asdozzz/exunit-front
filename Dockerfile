@@ -6,8 +6,6 @@ WORKDIR /app
 # install vite globally
 RUN npm install -g vite
 
-RUN yarn set version stable
-RUN yarn --version
 # copy all filtes
 COPY package.json yarn.lock ./
 
