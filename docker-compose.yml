@@ -12,6 +12,9 @@ services:
     env_file: ".env.local"
     stdin_open: true             # Позволяет корректно обрабатывать сигналы завершения
     tty: true
+    environment:
+      - NODE_ENV=development
+      - VITE_USER_NODE_ENV=development
     ports:
       - 8089:5173
     volumes:
