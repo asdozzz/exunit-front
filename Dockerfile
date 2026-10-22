@@ -15,4 +15,4 @@ COPY package.json yarn.lock ./
 RUN yarn install
 COPY . . 
 # vite default port
-CMD ["yarn", "run", "dev"]
+CMD ["yarn", "run", "dev", "--host", "0.0.0.0"]
