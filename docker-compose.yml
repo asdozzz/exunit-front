@@ -17,6 +17,4 @@ services:
       - VITE_USER_NODE_ENV=development
     ports:
       - 8089:5173
-    volumes:
-      - ./:/app
     command: sh -c "tail -f /dev/null"
