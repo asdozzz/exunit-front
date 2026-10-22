@@ -10,6 +10,8 @@ services:
         - type=registry,ref=${UNITMAN_CACHE_REPO}/exunit-front/app:${UNITMAN_BRANCH_NAME},mode=max
         - type=registry,ref=${UNITMAN_CACHE_REPO}/exunit-front/app:latest,mode=max
     env_file: ".env.local"
+    stdin_open: true             # Позволяет корректно обрабатывать сигналы завершения
+    tty: true
     ports:
       - 8089:5173
     volumes:
