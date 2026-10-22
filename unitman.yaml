@@ -30,7 +30,8 @@ services:
       paths:
         - node_modules/
         - .yarn
-
+build:
+  image: asdozzz/dind-unit:latest
 
 prepare:
   - envsubst < .env.dist > .env.local
