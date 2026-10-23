@@ -31,10 +31,7 @@ services:
         - node_modules/
         - .yarn
 build:
-  image: node:20-alpine
-  commands:
-    - apk add --no-cache gettext-envsubst
-    - npm install -g vite
+  image: asdozzz/dind-unit:latest
 
 prepare:
   - envsubst < .env.dist > .env.local
@@ -43,9 +40,8 @@ reset_prepare:
   - rm -rf .env.local
 
 up:
-  - yarn install
-  - nohup yarn dev &
+  - docker-compose up -d --build
 
 down:
-  - kill -9 `pidof yarn dev` || true
+  - docker-compose down
 
