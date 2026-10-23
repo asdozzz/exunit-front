@@ -33,6 +33,7 @@ services:
 build:
   image: node:20-alpine
   commands:
+    - apk add --no-cache gettext-envsubst
     - npm install -g vite
 
 prepare:
