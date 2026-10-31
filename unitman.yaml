@@ -3,6 +3,10 @@ variables:
     label: VITE_APP_TITLE
     type: string
     defaultValue: "def val"
+    helper:
+      projectId: 01a142fb-45f9-73e5-a1a8-d688b3bd8b3c
+      service: app
+      port: 8089
 
   - id: TEST_LIST
     label: Коллекция
