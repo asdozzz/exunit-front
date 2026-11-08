@@ -4,10 +4,10 @@ variables:
     type: string
     defaultValue: "def val"
     helper:
-      projectId: 01a142fb-45f9-73e5-a1a8-d688b3bd8b3c
-      service: app
-      port: 8089
-      suffix: /apiSuffix
+      projectId: 01a1973b-e6b8-7081-a590-acbd147068a0
+      service: nginx
+      port: 8081
+      suffix: /api
 
   - id: TEST_LIST
     label: Коллекция
